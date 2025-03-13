@@ -1,0 +1,10 @@
+POST http://localhost:3000/tags/
+Content-Type: application/json
+
+{
+    "name": "javascript",
+    "slug": "js",
+    "description": "All Javascript related posts.",
+    "schema": "{\"xyz\": \"abc\"}",
+    "featuredImageUrl": "https://xyz.com/img.png"
+}

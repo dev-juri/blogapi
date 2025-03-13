@@ -1,0 +1,22 @@
+{{
+  exports.publishOn = new Date().toString()
+}}
+
+POST http://localhost:3000/posts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEyLCJlbWFpbCI6ImpvaG5tYXJrQGRvZS5jb20iLCJpYXQiOjE3NDA2OTI0NzUsImV4cCI6MTc0MDY5NjA3NSwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.orV4xfbkdIJgNhg7xYxHx8rZ5cGHlEhjqhfaiD2FvUg
+
+{
+    "title": "What is new with Kotlin 2",
+    "postType": "post",
+    "slug": "new-with-kt-8",
+    "status": "draft",
+    "content": "Test content",
+    "schema": "{\"xyz\": \"abc\"}",
+    "featuredImageUrl": "https://xyz.com/img.png",
+    "publishedOn": "{{publishOn}}",
+    "tags": [2, 5],
+    "metaOptions": {
+        "metaValue": "{\"sideBarEnabled\": true, \"footerActive\": true}"
+    }
+}
