@@ -1,0 +1,11 @@
+POST http://localhost:3000/uploads/file
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEyLCJlbWFpbCI6ImpvaG5tYXJrQGRvZS5jb20iLCJpYXQiOjE3NDIyNTY3MzgsImV4cCI6MTc0MjI2MDMzOCwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.9DRekdtU8clu-VVqx2PWbCJz5sXTo7x-3Y4WBdjHn5c
+
+file
+--WebKitFormBoundary
+Content-Disposition: form-data; name="file"; filename="gfac.png"
+Content-Type: image/png
+
+< ./gfac.png
+--WebKitFormBoundary--
