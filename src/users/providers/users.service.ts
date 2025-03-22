@@ -34,16 +34,13 @@ export class UsersService {
     @InjectRepository(User)
     private usersRepository: Repository<User>,
 
-    @Inject(profileConfig.KEY)
-    private readonly profileConfiguration: ConfigType<typeof profileConfig>,
-
     private readonly createUserProvider: CreateUserProvider,
 
     private readonly usersCreateManyProvider: UsersCreateManyProvider,
 
     private readonly findOneUserByEmailProvider: FindOneUserByEmailProvider,
 
-    private readonly findOnByGoogleIdProvider: FindOneByGoogleIdProvider,
+    private readonly findOneByGoogleIdProvider: FindOneByGoogleIdProvider,
 
     private readonly createGoogleUserProvider: CreateGoogleUserProvider,
   ) {}
@@ -115,7 +112,7 @@ export class UsersService {
   }
 
   public async findOnByGoogleId(googleId: string) {
-    return await this.findOnByGoogleIdProvider.findOneByGoogleId(googleId);
+    return await this.findOneByGoogleIdProvider.findOneByGoogleId(googleId);
   }
 
   public async createGoogleUser(googleUser: GoogleUser) {
